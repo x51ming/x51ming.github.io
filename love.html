@@ -1,0 +1,91 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body,
+        html {
+            margin: 0;
+        }
+
+        canvas {
+            display: block;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <style>
+        .font>p {
+            font-size: 40px;
+            text-shadow: 0 0 2px black;
+            color: red;
+        }
+    </style>
+
+    <style>
+        body,
+        html {
+            width: 100%;
+            height: 100%;
+        }
+
+        body {
+            overflow: hidden;
+            margin: 0;
+            background-image: url("images/2.jpg");
+            background-size: cover;
+        }
+
+        .heart {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            margin: 50px auto;
+        }
+        .amid {
+            position: absolute; left: 50%; top: 50%;
+            transform: translate(-50%, -50%); 
+        }
+
+        .snowfall-flakes:before,
+        .snowfall-flakes:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 10px;
+            height: 15px;
+            background-color: #ff0000;
+            border-radius: 5px 5px 0 0;
+        }
+
+        .snowfall-flakes:before {
+            transform: rotate(-45deg);
+        }
+
+        .snowfall-flakes:after {
+            transform: translate(3.6px) rotate(45deg);
+        }
+    </style>
+    <div class="font amid">
+        <p>
+            <big>Love U Forever</big><br>
+        </p>
+    </div>
+
+    <!-- <div class="heart"></div> -->
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/snowfall.jquery.js"></script>
+    <script>
+        $(document).snowfall({ flakeCount: 100, maxSpeed: 10 });
+    </script>
+</body>
+
+</html>
